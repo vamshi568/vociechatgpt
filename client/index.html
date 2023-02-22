@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="\favicon_io\android-chrome-512x512.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice ChatGPT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b150de7fc7.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="chat">
+      
+      <div class="container">
+        <!-- <textarea
+         id="reqs" placeholder="Type to search..." required="" class="input" name="text" type="text"></textarea> -->
+         <textarea id="reqs" placeholder="Type here..." class="input" name="text" rows="0"></textarea>
+        <div class="icon">
+            <svg viewBox="0 0 512 512" class="ionicon" xmlns="http://www.w3.org/2000/svg">
+                <title>Search</title>
+                <path stroke-width="32" stroke-miterlimit="10" stroke="currentColor" fill="none" d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"></path>
+                <path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10" stroke-linecap="round" stroke="currentColor" fill="none"></path>
+            </svg>
+          </div>
+          <div class="send">
+
+            <i id="send" class="fa-regular fa-paper-plane"></i>
+          </div>
+        
+    </div>
+    <div   class="micro">
+      <label  class="switch">
+        <i class="fa-solid solid fa-microphone"></i>
+        <input id="btn" class="chk" type="checkbox">
+        <span class="slider"></span>
+        
+      </label>
+      
+    </div>
+   
+    
+  </div>
+  <ul id="chatbox"></ul>
+  <!-- <i class="fa-brands fa-android"></i>
+  <p id="responsed"></p> -->
+      
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
