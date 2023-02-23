@@ -24,7 +24,6 @@ app.get('/',async(req,res)=>{
 app.post('/',async(req,res)=>{
     try {
         const promt=req.body.promt
-        if (promt!==''){
         const response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: `${promt}`,
@@ -35,11 +34,10 @@ app.post('/',async(req,res)=>{
             presence_penalty: 0,
           });
           res.status(200).send({bot:response.data.choices[0].text})
-    }
-else{res.send('I could not able to uderstand you...')}
-} catch (error) {
+    }catch (error) {
         console.log(error)
-        res.send('I could not able to uderstand you...')
+        res.status(500)
+        res.send({bot:'There is an error in the server just try to reload or try after some time.'})
     }
 })
 
